@@ -1,0 +1,166 @@
+.org_info_banner{
+  width: 100%;
+  padding: 0 17px 0 15px;
+  box-sizing: border-box;
+  .header_box{
+    width: 100%;
+    margin-bottom: 24px;
+    .org-box{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      .org-name{
+        color: #000000;
+        font-size: 28px;
+        font-weight: 500;
+      }
+      .update_time{
+        display: flex;
+        align-items: center;
+        .el-icon-refresh{
+          color: #0FB8B8;
+          font-size: 14px;
+          margin-right: 2px;
+        }
+        .time{
+          color: #333333;
+          font-size: 12px;
+        }
+      }
+    }
+    .company_info{
+      width: 100%;
+      padding: 13px 12px;
+      box-sizing: border-box;
+      background: #F5FBFF;
+      display: flex;
+      .cominfo-left{
+        width: 45%;
+        flex-shrink: 0;
+      }
+      .cominfo-right{
+        flex: 1;
+      }
+      .cominfo-left,.cominfo-right{
+        .cf_person{
+          color: #666666;
+          font-size: 14px;
+          margin-bottom: 10px;
+          &:last-child{
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+.ciq_table_info {
+  .ciq_info_item {
+    padding: 0;
+    margin: 20px 0;
+
+    .el-form {
+      border: 1px solid #E4EEF6;
+    }
+
+    .el-form-item {
+      margin-bottom: 0;
+      border-bottom: 1px solid #E4EEF6;
+      background-color: $bg-three-color;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      /* 加入这个class可以调整表格的label文字太长时的行高 */
+      &.lineHeight {
+        .el-form-item__label {
+          line-height: 30px;
+        }
+
+        .el-form-item__content {
+          line-height: 30px;
+        }
+      }
+
+      .el-form-item__label {
+        background-color: $bg-three-color;
+        padding-left: 10px;
+        color: $font-light-color;
+        border-right: 1px solid#E4EEF6;
+        line-height: 44px;
+      }
+
+      .el-form-item__content {
+        padding-left: 10px;
+        background-color: #fff;
+        line-height: 44px;
+      }
+    }
+  }
+
+  .unit_base_info {
+    font-size: 16px;
+    margin-top: 20px;
+    font-family: PingFangSC-Semibold, PingFang SC;
+    font-weight: 600;
+    color: rgba(29, 30, 31, 1);
+  }
+}
+// 表格
+.ciq_table {
+  border: 1px solid #E4EEF6;
+  margin-bottom: 20px;
+
+  .row_header {
+    height: 43px;
+    line-height: 43px;
+    background-color: #F2F9FC;
+    font-weight: 400;
+    color: #333333;
+    font-size: 14px;
+    border-bottom: 1px solid #E4EEF6;
+
+    .borderRight {
+      border-right: 1px solid #E4EEF6;
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+  .row_content {
+    height: 43px;
+    line-height: 43px;
+    font-weight: 400;
+    color: #333333;
+    font-size: 14px;
+    border-bottom: 1px solid #E4EEF6;
+    &:last-child {
+      border-bottom: none;
+    }
+    .borderRight {
+      border-right: 1px solid #E4EEF6;
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+
+  .row_item {
+    height: 43px;
+    line-height: 43px;
+    font-weight: 400;
+    color: #333333;
+    border-bottom: 1px solid #E4EEF6;
+    font-size: 14px;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    .borderRight {
+      border-right: 1px solid #E4EEF6;
+    }
+  }
+}

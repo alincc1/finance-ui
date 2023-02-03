@@ -1,0 +1,46 @@
+.el-table {
+  width: 100%;
+  .cell{
+    padding: 0 0 0 18px;
+  }
+  th {
+    background-color: #F9F9F9;
+    border-right: 0;
+    // padding: 14px 0 15px 0;
+    height: 56px;
+    box-sizing: border-box;
+    &.cell{
+      color: $theme-font-color;
+    }
+  }
+  td {
+    // padding: 14px 0 15px 0;
+    height: 56px;
+    box-sizing: border-box;
+    color: $theme-font-color;
+  }
+}
+// 滚动条样式
+.el-table__body-wrapper {
+  /*垂直滚动条的宽*/
+  &::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+  }
+  /*修改滚动条的背景和圆角*/
+  &::-webkit-scrollbar-track-piece {
+      background: #eeeeee;
+      border-radius: 6px;
+  }
+  /*修改垂直滚动条的样式*/
+  &::-webkit-scrollbar-thumb:vertical {
+      background-color: #ccc;
+      border-radius: 6px;
+  }
+
+  /*修改水平滚动条的样式*/
+  &::-webkit-scrollbar-thumb:horizontal {
+      background-color: #7F7F7F;
+      border-radius: 10px;
+  }
+}

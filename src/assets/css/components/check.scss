@@ -1,0 +1,66 @@
+#check{
+  background: #ffffff;
+  border: 1px solid #ccc;
+  .el-dialog{
+    width: 550px !important;
+    .el-dialog__header{
+      height: 48px !important;
+    }
+    .el-dialog__body{
+      padding: 0 !important;
+    }
+    .dislogContent{
+      padding: 24px 87px 0 59px;
+      .el-form{
+        position: relative;
+        width: 100%;
+        margin: 0;
+        .el-form-item{
+          // display: flex;
+          // justify-content: flex-end;
+          margin-bottom: 24px;
+          .el-form-item__content{
+            position: absolute;
+            right: 0;
+            width: 302px !important;
+          }
+          .el-form-item__label{
+            width: 100px !important;
+            overflow: hidden;
+            padding: 0;
+          }
+        }
+        .el-form-item:nth-child(2){
+          height: 96px !important;
+        }
+        .unify{
+          width: 302px !important;
+        }
+        .el-textarea{
+          height: 96px !important;
+          // resize:none;
+          .el-textarea__inner{
+          height: 96px !important;
+          resize:none;
+          font-family: PingFangSC-Regular, PingFang SC;
+          font-weight: 400;
+          // color: #C1C1C1;
+          }
+        }
+      }
+    }
+    #btns{
+      border-top: 1px solid #F0F0F0;
+      padding: 11px 24px 11px 0;
+      .right-btns span{
+        font-size: 14px !important;
+      }
+      button{
+        padding: 8px 18px !important;
+      }
+    }
+  }
+}
+// .el-picker-panel{
+//   top: 398px !important;
+// }

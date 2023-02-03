@@ -1,0 +1,28 @@
+.fc-tabs {
+  height: 60px;
+  font-size: 14px;
+  color: $font-light-color;
+
+  .fc-tabs--item {
+    line-height: 60px;
+    height: 60px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 20px;
+
+    &.active {
+      color: $theme-color;
+      border-bottom: 2px solid $theme-color;
+    }
+  }
+
+  &.fc-tabs--small {
+    height: 45px;
+
+    .fc-tabs--item {
+      line-height: 45px;
+      height: 45px;
+      margin: 0 8px;
+    }
+  }
+}

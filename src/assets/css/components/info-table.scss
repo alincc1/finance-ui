@@ -1,0 +1,107 @@
+#info-table {
+  margin-bottom: 48px;
+  width: 100%;
+  .row-container {
+      width: 100%;
+      display: flex;
+  }
+  .col-left {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      border: 1px solid #eee;
+      background: #f9fafc;
+      .row-item-pic {
+          // width: 200px;
+          // height: 160px;
+          image {
+              object-fit: cover;
+          }
+          .image-slot {
+              width: 100%;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 30px;
+              background: #f5f7fa;
+          }
+      }
+      // img {
+      //     display: block;
+      //     object-fit: cover;
+      // }
+      span {
+          display: block;
+          line-height: 2;
+      }
+  }
+  .row-flex {
+      > div {
+          border: 1px solid #eee;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 60px;
+          box-sizing: border-box;
+          padding: 10px;
+          &:first-child {
+              background: #f9fafc
+          }
+      }
+      &-value:hover{
+          cursor: pointer;
+          background:#f9fafc;
+      }
+      .a-button {
+          margin-left: 30px;
+      }
+  }
+}
+// #info-table{
+//     margin-bottom: 48px;
+//     .row-container {
+//         display: flex;
+//     }
+//     .col-left {
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         flex-direction: column;
+//         border: 1px solid #eee;
+//         background: #f9fafc;
+//         .row-item-pic {
+//             image {
+//                 object-fit: cover;
+//             }
+//             .image-slot {
+//                 width: 100%;
+//                 height: 100%;
+//                 display: flex;
+//                 justify-content: center;
+//                 align-items: center;
+//                 font-size: 30px;
+//                 background: #f5f7fa;
+//             }
+//         }
+//         span {
+//             display: block;
+//             line-height: 2;
+//         }
+//     }
+//     .row-flex {
+//         > div {
+//             border: 1px solid #eee;
+//             text-align: center;
+//             height: 48px;
+//             padding: 10px;
+//             overflow: hidden;
+//             white-space: nowrap!important;
+//             text-overflow: ellipsis;
+//             &:first-child {
+//                 background: #f9fafc
+//             }
+//         }
+//     }
+// }

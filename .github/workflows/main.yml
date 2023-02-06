@@ -7,11 +7,17 @@ on:
 jobs:
   main:
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
     steps:
-    - name: Checkout
-      uses: actions/checkout@v3
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
       with:
-        persist-credentials: false
+        node-version: ${{ matrix.node-version }}
         
     # react项目为npm run-script build，vue项目改为npm run build
     - name: Install and Build

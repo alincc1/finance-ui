@@ -68,9 +68,36 @@
 ### **message（提示、警告）**
 
 ### **path**
+| 函数名            | 方法说明           | 其他描述           |
+| ----------------- | ----------------- |-------------------|
+| setVersion(val)    |   设置版本号          | string |
+| getVersion()      |   获取版本号          |  |
+| routerPush(options, blank = false)    |   路由/地址跳转         |以下  |
+| getRegionFileUrl (url, region)    |   获取图片、文件等资源（统一平台）|例：getRegionFileUrl('/0021/0001/audit-bg.png')  |
+| getUseRegion()    |   获取用户区划 |  |
+| getFileName(url)    |   获取链接里的文件名称 |  |
+| getFileName(url)    |   获取链接里的文件名称 |  |
+| pushAuth(url)    |   get方式下载文件 |  |
+| routerRefresh()    |   链接过期 重新刷新 |  |
+| pushToken    |   为地址参数增加token和platform字段 |例：addQueryUrl('/home',{name:'90',id:10}) //'/home?name=90&id=10&token=xxx&platform=fuchi'  |
+| openUrl(url, name = '在线文档', onlineShow = false) | 打开文件、文档 |  |
+| isPdf (attachName) | 判断pdf文件 |  |
+
+
+#### routerPush(options, blank = false) 示例
+- 用法1：routerPush('http://www.baidu.com') // 带http
+- 用法2：routerPush({path:'/home',query:{id:'asc1'}}) // vue-router
+- 用法3：routerPush({path:'/home',query:{id:'asc1'}},true) // vue-router 新页签方式
 
 ### **subscribe（观察、订阅者模式）**
-
+| 函数名            | 方法说明           | 其他描述           |
+| ----------------- | ----------------- |-------------------|
+| bind      | 发起事件监听          | window.Z.global.subscribe.bind('on-test',(val)=>{console.log(val)}) |
+| trigger   | 触发事件          | window.Z.global.subscribe.trigger('on-test','触发事件-----') |
+| ready     | 触发事件及发起事件监听(包括已发生的事件)  |触发：ready('on-test','触发事件-----------------'),监听：ready('on-test',(val)=>{console.log(val)})  |
+| readyOnce | 只触发一次事件 | 触发：ready('on-test','触发事件-----------------'),监听：readyOnce('on-test',(val)=>{console.log(val)}) |
+| unbind(event, func)    | 解绑事件          |  |
+| clearBind(func) | 清除绑定          |  |
 
 ### **utils（方法、工具）**
 | 函数名            | 方法说明           | 其他描述           |

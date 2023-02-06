@@ -53,6 +53,10 @@ export default {
     visible: {
       type: Boolean,
       default: false
+    },
+    headerBgImg: {
+      type: String,
+      default: () => window.Z.global.path.getRegionFileUrl('/0001/0010/high-level.png')
     }
   },
   computed: { // 根据检测报告总状态计算对应样式值
@@ -62,9 +66,9 @@ export default {
         Y: 'normal-level'
       }[this.data.status]
     },
-    headerBgImg () {
-      return window.Z.global.path.getRegionFileUrl(`/0001/0010/high-level.png`)
-    }
+    // headerBgImg () {
+    //   return window.Z.global.path.getRegionFileUrl(`/0001/0010/high-level.png`)
+    // }
   },
   data () {
     return {

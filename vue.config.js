@@ -4,13 +4,14 @@
  */
 const path = require("path");
 const { defineConfig } = require("@vue/cli-service");
-const PORT = 9898
-
+const libs = require('./package.json')
+const PORT = 9898 // 端口
 module.exports = defineConfig({
   lintOnSave:false,
+  publicPath: process.env.NODE_ENV==='production'? libs.homepage : '/',
   devServer: {
     port: PORT,
-    open: 'http://localhost:' + PORT,  // 自动打开浏览器
+    open: 'http://localhost:' + PORT,
 },
   transpileDependencies: true,
   chainWebpack: (config) => {

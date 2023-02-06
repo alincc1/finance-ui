@@ -39,7 +39,7 @@ export function routerPush (options, blank = false) {
     return
   }
   // 跳转新连接
-  let href = window.Z.service.string.addQueryUrl(options.path, options.query)
+  let href = window.Z.service.utils.string.addQueryUrl(options.path, options.query)
   if (options.useToken) { href = pushToken(href) }
   if (blank) { window.open(href, '_blank') } else { window.location.href = href }
 }

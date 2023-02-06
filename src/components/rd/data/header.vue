@@ -6,7 +6,7 @@
           <img src="../../../assets/images/zqlian.png" alt="logo" style="width: 130px;" />
         </div>
         <div class="back-box" @click="goBack" v-if="showBack">
-          <img :src="window.Z.global.path.getRegionFileUrl('/0021/0001/back.png')" class="back-img mr-10">
+          <img :src="backImg" class="back-img mr-10">
           <span class="fz-16 name">{{backName}}</span>
         </div>
       </div>
@@ -32,11 +32,15 @@ export default {
   title: '顶栏容器',
   desc: '',
   props: {
+    backImg: {
+      type: String,
+      default: () => window.Z.global.path.getRegionFileUrl('/0021/0001/back.png')
+    }
   },
   data () {
     return {
-      imgUrl: window.Z.global.path.getRegionFileUrl("/0021/0002/page-logo.png"),
-      avatar: window.Z.global.path.getRegionFileUrl("/0006/0003/user.png")
+      // imgUrl: window.Z.global.path.getRegionFileUrl("/0021/0002/page-logo.png"),
+      // avatar: window.Z.global.path.getRegionFileUrl("/0006/0003/user.png")
       // userInfo: {}
     }
   },

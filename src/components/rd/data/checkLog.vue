@@ -28,7 +28,7 @@
               <div class="right-name">{{item.assigneeList}}</div>
               <div class="right-name">{{item.dealOpinion}}</div>
               <div class="right-name">{{item.dealOperation}}</div>
-              <div class="right-time">{{window.Z.global.date.timestampFormat(item.createdAt, 'YYYY-MM-DD HH:mm:ss')}}</div>
+              <div class="right-time">{{item.createdAt ? window.Z.global.date.timestampFormat(item.createdAt, 'YYYY-MM-DD HH:mm:ss') : item.createdAt}}</div>
             </div>
           </div>
         </div>

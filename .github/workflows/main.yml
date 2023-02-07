@@ -1,28 +1,27 @@
-name: CI
+name: CI Github Pages
 on:
+  #监听push操作
   push:
     branches:
-      - main
-
+      - main # 这里只配置了main分支，所以只有推送main分支才会触发以下任务
 jobs:
-  main:
+  # 任务ID
+  build-and-deploy:
+    # 运行环境
     runs-on: ubuntu-latest
+    # 步骤
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-      with:
-        persist-credentials: false
-        
-    # react项目为npm run-script build，vue项目改为npm run build
-    - name: Install and Build
-      run: |
-        npm install
-        npm run build
-     
-    # react项目的FOLDER为build，vue项目改为dist   
-    - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@releases/v3
-      with:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BRANCH: gh-pages
-        FOLDER: dist
+      # 官方action，将代码拉取到虚拟机
+      - name: Checkout  ️ 
+        uses: actions/checkout@v3
+
+      - name: Install and Build   # 安装依赖、打包，如果提前已打包好无需这一步
+        run: |
+          npm install
+          npm run build
+
+      - name: Deploy   # 部署
+        uses: JamesIves/github-pages-deploy-action@v4.3.3
+        with:
+          branch: gh-pages # 部署后提交到那个分支
+          folder: dist # 这里填打包好的目录名称
